@@ -11,7 +11,7 @@ const profile: Profile = {
   instagram: "",
 }
 
-const CONFIG = {
+export const CONFIG = {
   // profile setting (required)
   profile: profile,
   projects: [
