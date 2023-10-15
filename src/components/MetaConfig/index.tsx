@@ -1,5 +1,6 @@
 import { CONFIG } from "site.config"
 import Head from "next/head"
+import { Profile } from "src/types"
 
 export type MetaConfigProps = {
   title: string
@@ -11,6 +12,7 @@ export type MetaConfigProps = {
 }
 
 const MetaConfig: React.FC<MetaConfigProps> = (props) => {
+  const profile: Profile = CONFIG.profile
   return (
     <Head>
       <title>{props.title}</title>
@@ -33,7 +35,7 @@ const MetaConfig: React.FC<MetaConfigProps> = (props) => {
       {props.type === "Post" && (
         <>
           <meta property="article:published_time" content={props.date} />
-          <meta property="article:author" content={CONFIG.profile.name} />
+          <meta property="article:author" content={profile.name} />
         </>
       )}
     </Head>

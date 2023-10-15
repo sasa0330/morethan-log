@@ -49,3 +49,14 @@ export type TCategories = {
 }
 
 export type ThemeType = "dark" | "light"
+
+export type Profile = {
+  name: string
+  image: string
+  role: string
+  bio: string
+  email: string
+  linkedin: string
+  github: string
+  instagram: string
+}

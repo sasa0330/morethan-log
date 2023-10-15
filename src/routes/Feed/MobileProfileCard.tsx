@@ -2,28 +2,30 @@ import { CONFIG } from "site.config"
 import Image from "next/image"
 import React from "react"
 import styled from "@emotion/styled"
+import { Profile } from "src/types"
 
 type Props = {
   className?: string
 }
 
 const MobileProfileCard: React.FC<Props> = () => {
+  const profile: Profile = CONFIG.profile
   return (
     <StyledWrapper>
       <div className="top">💻 Profile</div>
       <div className="mid">
         <div className="wrapper">
           <Image
-            src={CONFIG.profile.image}
+            src={profile.image}
             width={90}
             height={90}
             css={{ position: "relative" }}
             alt="profile_image"
           />
           <div className="wrapper">
-            <div className="top">{CONFIG.profile.name}</div>
-            <div className="mid">{CONFIG.profile.role}</div>
-            <div className="btm">{CONFIG.profile.bio}</div>
+            <div className="top">{profile.name}</div>
+            <div className="mid">{profile.role}</div>
+            <div className="btm">{profile.bio}</div>
           </div>
         </div>
       </div>

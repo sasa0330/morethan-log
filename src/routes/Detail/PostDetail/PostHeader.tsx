@@ -1,6 +1,6 @@
 import { CONFIG } from "site.config"
 import Tag from "src/components/Tag"
-import { TPost } from "src/types"
+import { Profile, TPost } from "src/types"
 import { formatDate } from "src/libs/utils"
 import Image from "next/image"
 import React from "react"
@@ -11,6 +11,7 @@ type Props = {
 }
 
 const PostHeader: React.FC<Props> = ({ data }) => {
+  const profile: Profile = CONFIG.profile
   return (
     <StyledWrapper>
       <h1 className="title">{data.title}</h1>
@@ -22,7 +23,7 @@ const PostHeader: React.FC<Props> = ({ data }) => {
                 <div className="author">
                   <Image
                     css={{ borderRadius: "50%" }}
-                    src={data.author[0].profile_photo || CONFIG.profile.image}
+                    src={data.author[0].profile_photo || profile.image}
                     alt="profile_photo"
                     width={24}
                     height={24}

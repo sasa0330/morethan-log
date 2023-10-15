@@ -7,15 +7,17 @@ import {
   AiFillLinkedin,
 } from "react-icons/ai"
 import styled from "@emotion/styled"
+import { Profile } from "src/types"
 
 const ContactCard: React.FC = () => {
+  const prifile: Profile = CONFIG.profile
   return (
     <>
       <StyledTitle>💬 Contact</StyledTitle>
       <StyledWrapper>
-        {CONFIG.profile.github && (
+        {prifile.github && (
           <a
-            href={`https://github.com/${CONFIG.profile.github}`}
+            href={`https://github.com/${prifile.github}`}
             rel="noreferrer"
             target="_blank"
           >
@@ -23,9 +25,9 @@ const ContactCard: React.FC = () => {
             <div className="name">github</div>
           </a>
         )}
-        {CONFIG.profile.instagram && (
+        {prifile.instagram && (
           <a
-            href={`https://www.instagram.com/${CONFIG.profile.instagram}`}
+            href={`https://www.instagram.com/${prifile.instagram}`}
             rel="noreferrer"
             target="_blank"
           >
@@ -33,9 +35,9 @@ const ContactCard: React.FC = () => {
             <div className="name">instagram</div>
           </a>
         )}
-        {CONFIG.profile.email && (
+        {prifile.email && (
           <a
-            href={`mailto:${CONFIG.profile.email}`}
+            href={`mailto:${prifile.email}`}
             rel="noreferrer"
             target="_blank"
             css={{ overflow: "hidden" }}
@@ -44,9 +46,9 @@ const ContactCard: React.FC = () => {
             <div className="name">email</div>
           </a>
         )}
-        {CONFIG.profile.linkedin && (
+        {prifile.linkedin && (
           <a
-            href={`https://www.linkedin.com/in/${CONFIG.profile.linkedin}`}
+            href={`https://www.linkedin.com/in/${prifile.linkedin}`}
             rel="noreferrer"
             target="_blank"
           >

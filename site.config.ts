@@ -1,15 +1,19 @@
+import { Profile } from "src/types"
+
+const profile: Profile = {
+  name: "ささもり",
+  image: "/avatar.svg", // If you want to create your own notion avatar, check out https://notion-avatar.vercel.app
+  role: "frontend developer",
+  bio: "I develop everything using node.",
+  email: "sasa0330y@gmail.com",
+  linkedin: "morethanmin",
+  github: "https://github.com/sasa0330",
+  instagram: "",
+}
+
 const CONFIG = {
   // profile setting (required)
-  profile: {
-    name: "morethanmin",
-    image: "/avatar.svg", // If you want to create your own notion avatar, check out https://notion-avatar.vercel.app
-    role: "frontend developer",
-    bio: "I develop everything using node.",
-    email: "morethanmin.dev@gmail.com",
-    linkedin: "morethanmin",
-    github: "morethanmin",
-    instagram: "",
-  },
+  profile: profile,
   projects: [
     {
       name: `morethan-log`,
