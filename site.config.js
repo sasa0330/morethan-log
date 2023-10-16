@@ -1,6 +1,5 @@
-import { Profile } from "src/types"
-
-const profile: Profile = {
+// TODO: tsファイル化して型定義したいけどエラーになるので、一旦後回し
+const profile = {
   name: "ささもり",
   image: "/avatar.svg", // If you want to create your own notion avatar, check out https://notion-avatar.vercel.app
   role: "frontend developer",
@@ -11,7 +10,7 @@ const profile: Profile = {
   instagram: "",
 }
 
-export const CONFIG = {
+const CONFIG = {
   // profile setting (required)
   profile: profile,
   projects: [
