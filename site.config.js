@@ -15,14 +15,14 @@ const CONFIG = {
   profile: profile,
   projects: [
     {
-      name: `morethan-log`,
+      name: `ささもり Frontend Note`,
       href: "https://github.com/morethanmin/morethan-log",
     },
   ],
   // blog setting (required)
   blog: {
-    title: "morethan-log",
-    description: "welcome to morethan-log!",
+    title: "ささもり Frontend Note",
+    description: "welcome to ささもり Frontend Note!",
   },
 
   // CONFIG configration (required)
